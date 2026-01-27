@@ -65,7 +65,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-32 md:pt-36 gradient-bg pb-16 md:pb-20 scroll-mt-32">
+    <section id="home" class="pt-28 md:pt-32 gradient-bg pb-16 md:pb-20 min-h-[calc(100vh-64px)] flex items-center scroll-mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2 leading-tight">
@@ -115,20 +115,20 @@
     <div class="border-t-2 border-gray-200"></div>
 
     <!-- Enterprise AI Solutions -->
-    <section id="solutions" class="py-8 md:py-10 bg-gray-50 scroll-mt-32">
+    <section id="solutions" class="py-12 md:py-16 bg-gray-50 scroll-mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Cash Forecasting -->
             <div id="cash-forecasting" class="scroll-mt-32">
-                <div class="bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-2xl shadow-2xl p-6 md:p-8 max-w-5xl mx-auto">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="text-5xl">🎯</div>
+                <div class="bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-2xl shadow-2xl p-5 md:p-6 max-w-5xl mx-auto">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="text-4xl">🎯</div>
                         <div>
-                            <h4 class="text-3xl font-bold">AI-Powered Cash Forecasting</h4>
-                            <p class="text-blue-100 text-lg">Our flagship product – production-ready for immediate deployment</p>
+                            <h4 class="text-2xl md:text-3xl font-bold">AI-Powered Cash Forecasting</h4>
+                            <p class="text-blue-100 text-base">Our flagship product – production-ready for immediate deployment</p>
                         </div>
                     </div>
-                    
-                    <div class="grid md:grid-cols-3 gap-8 mb-6">
+
+                    <div class="grid md:grid-cols-3 gap-6 mb-5">
                         <div>
                             <h5 class="font-semibold text-xl mb-4 text-blue-100">Core Capabilities</h5>
                             <ul class="space-y-3">
@@ -156,15 +156,9 @@
                                     </svg>
                                     <span><strong>SHAP Explainability</strong> – Understand drivers: delayed collections, PO shifts, seasonality</span>
                                 </li>
-                                <li class="flex items-start gap-3">
-                                    <svg class="w-6 h-6 text-blue-200 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    <span><strong>Outlier Detection</strong> – Early warning on anomalies requiring attention</span>
-                                </li>
                             </ul>
                         </div>
-                        
+
                         <div>
                             <h5 class="font-semibold text-xl mb-4 text-blue-100">Advanced Architecture</h5>
                             <ul class="space-y-3">
@@ -178,7 +172,7 @@
                                     <svg class="w-6 h-6 text-blue-200 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span><strong>SAP-Agnostic Integration</strong> – OData/CDS/API with zero-risk production deployment</span>
+                                    <span><strong>SAP Integration</strong> – OData/CDS/API with zero-risk production deployment</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <svg class="w-6 h-6 text-blue-200 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -192,9 +186,15 @@
                                     </svg>
                                     <span><strong>Daily Retraining Loop</strong> – Auto-adjusts weights as new data arrives</span>
                                 </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-6 h-6 text-blue-200 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span><strong>Modern Lightweight Stack</strong> – FastAPI, DuckDB, Delta Lake, Streamlit</span>
+                                </li>
                             </ul>
                         </div>
-                        
+
                         <div>
                             <h5 class="font-semibold text-xl mb-4 text-blue-100">Human-Centered AI</h5>
                             <ul class="space-y-3">
@@ -220,28 +220,26 @@
                                     <svg class="w-6 h-6 text-blue-200 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span><strong>Modern Lightweight Stack</strong> – FastAPI, DuckDB, Delta Lake, Streamlit</span>
+                                    <span><strong>Outlier Detection</strong> – Early warning on anomalies requiring attention</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                        <p class="text-lg leading-relaxed mb-4">
-                            <strong>Demo Available:</strong> See the POC in action with real SAP S/4HANA data. Our working prototype demonstrates production-grade accuracy and can be customized to your specific Treasury environment.
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <p class="text-base leading-relaxed">
+                            <strong>Demo available</strong> showing Proof of Concept with SAP data.
                         </p>
-                        <div class="flex justify-center">
-                            <a href="https://valorean-cash-forecast-poc-qjkmnqxdvoyq2rvhnqfjik.streamlit.app" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all shadow-md hover:shadow-lg inline-flex items-center gap-2 group">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                Preview POC
-                                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                        </div>
+                        <a href="https://valorean-cash-forecast-poc-qjkmnqxdvoyq2rvhnqfjik.streamlit.app" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-50 transition-all shadow-md hover:shadow-lg inline-flex items-center gap-2 group whitespace-nowrap">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Preview POC
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
