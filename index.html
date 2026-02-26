@@ -624,10 +624,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
+    var form = this;
+
     grecaptcha.ready(function() {
-        grecaptcha.execute('6Ldck3gsAAAAAEi9xk8jFPhmJNdEQ7TePJ2GUzp-', {action: 'submit'}).then(function(token) {
+        grecaptcha.execute('6Ldck3gsAAAAAEi9xk8jFPhmJNdEQ7TePJ2GUzp-', {action: 'submit'})
+        .then(function(token) {
             document.getElementById('g-recaptcha-response').value = token;
-            e.target.submit();
+            form.submit();
+        })
+        .catch(function(error) {
+            // If reCAPTCHA fails, submit anyway (Formspree will handle validation)
+            console.log('reCAPTCHA error:', error);
+            form.submit();
         });
     });
 });
