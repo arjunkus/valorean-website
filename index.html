@@ -25,6 +25,7 @@
         }
         html { scroll-behavior: smooth; }
     </style>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ldck3gsAAAAAEi9xk8jFPhmJNdEQ7TePJ2GUzp-"></script>
 </head>
 <body class="bg-white">
     <!-- Navigation -->
@@ -501,6 +502,8 @@
                         <textarea name="message" rows="2" placeholder="Any specific areas you'd like to discuss? If you'd like an introductory call, please share your availability — preferred dates and time window — and we'll be happy to schedule." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white"></textarea>
                     </div>
 
+                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
                     <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group">
                         Send Message
                         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -615,5 +618,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+});
+</script>
+
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Ldck3gsAAAAAEi9xk8jFPhmJNdEQ7TePJ2GUzp-', {action: 'submit'}).then(function(token) {
+            document.getElementById('g-recaptcha-response').value = token;
+            e.target.submit();
+        });
+    });
 });
 </script>
