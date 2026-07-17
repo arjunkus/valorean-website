@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Worked examples of enterprise AI applied responsibly to treasury problems — cash forecasting, FX exposure and hedge management. From Arjun Krishnan, Valorean.ai.">
+    <meta name="keywords" content="Enterprise AI, Treasury AI, Agentic AI, SAP Treasury, S/4HANA, Cash Forecasting, Treasury Transformation, Arjun Krishnan">
+    <title>Case Studies — Enterprise AI for Treasury | Arjun Krishnan, Valorean.ai</title>
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Arjun Krishnan — Enterprise AI Solution Architect for Treasury">
+    <meta property="og:description" content="Helping Treasury leaders navigate the shift to enterprise AI — with the judgment, controls, and trust the profession demands.">
+    <meta property="og:image" content="https://www.valorean.ai/valorean-lockup.png">
+    <meta property="og:url" content="https://www.valorean.ai">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arjun Krishnan — Enterprise AI Solution Architect for Treasury">
+    <meta name="twitter:description" content="Helping Treasury leaders navigate the shift to enterprise AI. Author of Enterprise AI for Treasury.">
+    <meta name="twitter:image" content="https://www.valorean.ai/valorean-lockup.png">
+    
+    <!-- Schema.org Book markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Enterprise AI for Treasury: A Guide to Agentic Implementation",
+      "author": {
+        "@type": "Person",
+        "name": "Arjun Krishnan",
+        "jobTitle": "Founder & CEO, Valorean Technologies Inc.",
+        "url": "https://www.valorean.ai"
+      },
+      "bookFormat": "https://schema.org/Paperback",
+      "publisher": "Krishbooks",
+      "datePublished": "2026",
+      "url": "https://amzn.to/4vTH8Fv",
+      "image": "https://www.valorean.ai/Enterprise_AI_book_cover.jpg",
+      "description": "A practitioner's guide to agentic AI written entirely through the lens of treasury operations. Uses multi-horizon cash forecasting and FX exposure management as working examples."
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #EFF6FF 0%, #EEF2FF 50%, #F5F3FF 100%);
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeIvngsAAAAAK9aZ-Yo9d1BqJ-rvjYZRXX9LdVS"></script>
+</head>
+<body class="antialiased">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2"><img src="valorean-icon.png" alt="Valorean.ai" class="h-9 w-auto"><span class="text-3xl font-bold" style="color: #1e3a5f;">Valorean<span style="color: #3b82f6;">.ai</span></span></a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                    <a href="index.html#book" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Book</a>
+                    <a href="case-studies.html" class="nav-link text-blue-600 px-3 py-2 text-sm font-medium">Case Studies</a>
+                    <a href="index.html#media" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Media</a>
+                    <a href="index.html#contact" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                </div>
+                
+                <button class="md:hidden" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About</a>
+                <a href="index.html#book" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Book</a>
+                <a href="case-studies.html" class="block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white">Case Studies</a>
+                <a href="index.html#media" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Media</a>
+                <a href="index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-28 md:pt-32 gradient-bg pb-12 md:pb-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Case Studies</h1>
+            <p class="text-lg md:text-xl text-gray-700">Enterprise AI applied to specific treasury problems.</p>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+                <p>
+                    The clearest way to understand what responsible enterprise AI looks like in treasury is to see it applied to specific problems. What follows are worked examples &mdash; drawn from the book and from practical prototype work &mdash; of how enterprise AI can support treasury operations while preserving the judgment, controls, and trust the profession requires.
+                </p>
+                <p>
+                    Each case study reflects the same principles: multi-horizon reasoning, explainable outputs, production-safe integration with SAP, and the treasury professional firmly in the loop.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 1 -->
+    <section class="py-12 md:py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-6">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2">Case Study 01</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">Multi-Horizon Cash Forecasting</h2>
+                <p class="text-lg text-gray-600">Enterprise AI for the daily, tactical, and strategic horizons of treasury cash forecasting.</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-md p-6 md:p-8">
+                <div class="space-y-4 text-gray-700 leading-relaxed">
+                    <p>
+                        Cash forecasting is often the first place organizations look when they consider enterprise AI for treasury &mdash; and for good reason. It's data-rich, decision-adjacent, and touches every downstream treasury process. But it's also a place where the wrong AI approach can quietly erode the professional judgment that makes forecasts meaningful.
+                    </p>
+                    <p>
+                        This case study &mdash; described in depth in <em>Enterprise AI for Treasury</em> and demonstrated through a working prototype &mdash; shows what a responsible approach looks like: T+1 daily cash position, multi-horizon predictions from T+7 to T+90 and beyond, forecast accuracy tracking, and explainable AI that helps treasury professionals understand what's driving the forecast.
+                    </p>
+                    <p class="text-sm text-gray-600 italic pt-2">Detailed write-up in preparation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 2 -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-6">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2">Case Study 02</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">FX Exposure and Hedge Management</h2>
+                <p class="text-lg text-gray-600">Enterprise AI for identifying, quantifying, and supporting decisions on FX exposure and hedge effectiveness.</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl shadow-md p-6 md:p-8">
+                <div class="space-y-4 text-gray-700 leading-relaxed">
+                    <p>
+                        FX exposure and hedge management sit close to the strategic heart of corporate treasury. Every decision has consequences on the balance sheet, on cost of hedging, and on the organization's tolerance for volatility. Enterprise AI in this domain must therefore be exceptionally disciplined about explainability, accountability, and where the human professional makes the call.
+                    </p>
+                    <p>
+                        This case study &mdash; also explored in <em>Enterprise AI for Treasury</em> &mdash; walks through how a multi-agent system can support exposure identification, quantification, and hedge recommendations while keeping the treasury professional firmly in charge of every consequential decision.
+                    </p>
+                    <p class="text-sm text-gray-600 italic pt-2">Detailed write-up in preparation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming next -->
+    <section class="py-12 md:py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Coming next</h2>
+            <div class="space-y-4 text-gray-700 leading-relaxed text-center">
+                <p>
+                    Additional case studies drawn from the treasury domains covered in the book &mdash; liquidity management, payments, fraud detection, working capital &mdash; are in preparation.
+                </p>
+                <p class="text-gray-600">
+                    If a specific treasury problem is on your mind and you'd welcome a conversation on how enterprise AI might apply, please <a href="index.html#contact" class="text-blue-600 hover:text-blue-700 font-medium">get in touch</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Let's talk.</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                If one of these case studies mirrors a challenge you're working on, or you'd like a second opinion on an approach you're considering, I'd be glad to hear from you.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="index.html#contact" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">Get in touch</a>
+                <a href="https://calendly.com/arjun-valorean" target="_blank" rel="noopener" class="inline-flex items-center px-6 py-3 bg-white hover:bg-gray-50 text-blue-600 font-medium rounded-lg border border-blue-600 transition-colors">Schedule a call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-2xl font-bold mb-2">Valorean<span style="color: #60a5fa;">.ai</span></p>
+            <p class="text-sm text-gray-400">&copy; 2026 Valorean Technologies Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    </body>
+</html>
