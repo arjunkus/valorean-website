@@ -39,6 +39,16 @@
     }
     </script>
     
+    <script>
+      // Silence the Tailwind CDN "not for production" console advisory (cosmetic only).
+      (function () {
+        var w = console.warn;
+        console.warn = function () {
+          if (arguments[0] && String(arguments[0]).indexOf('cdn.tailwindcss.com') !== -1) return;
+          return w.apply(console, arguments);
+        };
+      })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,7 +124,7 @@
     <section class="pt-28 md:pt-32 gradient-bg pb-12 md:pb-16">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Case Studies</h1>
-            <p class="text-lg md:text-xl text-gray-700">Enterprise AI applied to specific treasury problems.</p>
+            <p class="text-lg md:text-xl text-gray-700">Enterprise AI applied to specific treasury operational workflows.</p>
         </div>
     </section>
 
@@ -123,20 +133,73 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
                 <p>
-                    The clearest way to understand what responsible enterprise AI looks like in treasury is to see it applied to specific problems. What follows are worked examples &mdash; drawn from the book and from practical prototype work &mdash; of how enterprise AI can support treasury operations while preserving the judgment, controls, and trust the profession requires.
+                    The clearest way to understand what responsible enterprise AI looks like in treasury is to see it applied to specific problems. What follows are worked examples &mdash; drawn from experience and from practical prototype work &mdash; of how enterprise AI can support treasury operations while preserving the judgment, controls, and trust the profession demands.
                 </p>
                 <p>
-                    Each case study reflects the same principles: multi-horizon reasoning, explainable outputs, production-safe integration with SAP, and the treasury professional firmly in the loop.
+                    Each case study reflects the same principles: multi-horizon reasoning, explainable outputs, and the treasury professional firmly in the loop.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Case Study 1 -->
-    <section class="py-12 md:py-16 bg-gray-50">
+    <section class="py-12 md:py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-6">
                 <p class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2">Case Study 01</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">FX Exposure and Hedge Management</h2>
+                <p class="text-lg text-gray-600">Enterprise AI for identifying, quantifying, and supporting decisions on FX exposure and hedge effectiveness.</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl shadow-md p-6 md:p-8">
+                <div class="space-y-4 text-gray-700 leading-relaxed">
+                    <p>
+                        FX exposure and hedge management sit close to the strategic heart of corporate treasury. Every decision has consequences on the balance sheet, on cost of hedging, and on the organization's tolerance for risk. Enterprise AI in this domain must therefore be exceptionally disciplined about explainability, accountability, and where the human professional makes the call.
+                    </p>
+                    <p>
+                        This case study follows a multinational group through its monthly cycle: consolidating FX exposures across subsidiaries, netting intercompany positions multilaterally through an in-house bank, and arriving at the group's true residual exposure &mdash; the only position that could ever need an external hedge. From there the system recommends the hedges, sized and justified, for the treasury professional to approve. The professional remains firmly in charge of every consequential decision.
+                    </p>
+
+                    <div class="pt-4">
+                        <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Proof of concept</p>
+                        <p>
+                            A proof of concept takes this further than the page can. It runs a full month-end cycle for a multinational group &mdash; retrieving FX exposures, classifying what is in scope, netting multilaterally through an in-house bank, and arriving at hedge recommendations for the treasurer to approve or override. The emphasis throughout is on governance: every step is recorded, and the human makes every consequential call.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-x-6 gap-y-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <span class="text-blue-600 font-bold flex-none mt-0.5">&#10003;</span>
+                            <p class="text-base leading-relaxed">A multi-agent architecture consolidates what is normally a fragmented, multi-team process into a single auditable workflow. The separation between agents mirrors segregation of duties &mdash; a familiar control principle rather than a technical convenience.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-blue-600 font-bold flex-none mt-0.5">&#10003;</span>
+                            <p class="text-base leading-relaxed">Each recommendation &mdash; and each deliberate decision not to hedge &mdash; carries its own reasoning, so the professional reviewing it can see why, not just what.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-blue-600 font-bold flex-none mt-0.5">&#10003;</span>
+                            <p class="text-base leading-relaxed">Every figure traces back to its source through a verifiable chain, so review and audit are a matter of inspection rather than reconstruction.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-blue-600 font-bold flex-none mt-0.5">&#10003;</span>
+                            <p class="text-base leading-relaxed">The pipeline works from a normalised extraction, so the same approach applies regardless of the underlying system of record.</p>
+                        </div>
+                    </div>
+
+                    <p class="pt-2">
+                        The proof of concept is best seen live &mdash; the multi-agent structure working through the full cycle, reducing what is normally days or weeks of work across several teams to a matter of seconds and minutes. If you would like to see it, or to talk it through in the context of your own treasury, please do <a href="index.html#contact" class="text-blue-600 hover:text-blue-700 font-medium">get in touch</a>.
+                    </p>
+
+                    <p class="text-sm text-gray-500 italic pt-2">For the purpose of this proof of concept, the synthetic data is modelled in SAP format &mdash; reflecting the In-House Banking, AP, AR, and Treasury modules. That said, the pipeline works from a normalised extraction, so the same approach applies regardless of the underlying system of record. It is a demonstration of how a multi-agent AI architecture operates within a complex treasury workflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 2 -->
+    <section class="py-12 md:py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-6">
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2">Case Study 02</p>
                 <h2 class="text-3xl font-bold text-gray-900 mb-3">Multi-Horizon Cash Forecasting</h2>
                 <p class="text-lg text-gray-600">Enterprise AI for the daily, tactical, and strategic horizons of treasury cash forecasting.</p>
             </div>
@@ -146,47 +209,10 @@
                         Cash forecasting is often the first place organizations look when they consider enterprise AI for treasury &mdash; and for good reason. It's data-rich, decision-adjacent, and touches every downstream treasury process. But it's also a place where the wrong AI approach can quietly erode the professional judgment that makes forecasts meaningful.
                     </p>
                     <p>
-                        This case study &mdash; described in depth in <em>Enterprise AI for Treasury</em> and demonstrated through a working prototype &mdash; shows what a responsible approach looks like: T+1 daily cash position, multi-horizon predictions from T+7 to T+90 and beyond, forecast accuracy tracking, and explainable AI that helps treasury professionals understand what's driving the forecast.
+                        This case study shows what a responsible approach looks like: T+1 daily cash position, multi-horizon predictions from T+7 to T+90 and beyond, forecast accuracy tracking, and explainable AI that helps treasury professionals understand what's driving the forecast.
                     </p>
                     <p class="text-sm text-gray-600 italic pt-2">Detailed write-up in preparation.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Study 2 -->
-    <section class="py-12 md:py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-6">
-                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2">Case Study 02</p>
-                <h2 class="text-3xl font-bold text-gray-900 mb-3">FX Exposure and Hedge Management</h2>
-                <p class="text-lg text-gray-600">Enterprise AI for identifying, quantifying, and supporting decisions on FX exposure and hedge effectiveness.</p>
-            </div>
-            <div class="bg-gray-50 rounded-2xl shadow-md p-6 md:p-8">
-                <div class="space-y-4 text-gray-700 leading-relaxed">
-                    <p>
-                        FX exposure and hedge management sit close to the strategic heart of corporate treasury. Every decision has consequences on the balance sheet, on cost of hedging, and on the organization's tolerance for volatility. Enterprise AI in this domain must therefore be exceptionally disciplined about explainability, accountability, and where the human professional makes the call.
-                    </p>
-                    <p>
-                        This case study &mdash; also explored in <em>Enterprise AI for Treasury</em> &mdash; walks through how a multi-agent system can support exposure identification, quantification, and hedge recommendations while keeping the treasury professional firmly in charge of every consequential decision.
-                    </p>
-                    <p class="text-sm text-gray-600 italic pt-2">Detailed write-up in preparation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Coming next -->
-    <section class="py-12 md:py-16 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Coming next</h2>
-            <div class="space-y-4 text-gray-700 leading-relaxed text-center">
-                <p>
-                    Additional case studies drawn from the treasury domains covered in the book &mdash; liquidity management, payments, fraud detection, working capital &mdash; are in preparation.
-                </p>
-                <p class="text-gray-600">
-                    If a specific treasury problem is on your mind and you'd welcome a conversation on how enterprise AI might apply, please <a href="index.html#contact" class="text-blue-600 hover:text-blue-700 font-medium">get in touch</a>.
-                </p>
             </div>
         </div>
     </section>
