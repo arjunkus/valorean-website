@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Arjun Krishnan, CTP — helping Treasury leaders navigate the shift to enterprise AI. Author of Enterprise AI for Treasury. Founder, Valorean Technologies Inc.">
     <meta name="keywords" content="Enterprise AI, Treasury AI, Agentic AI, SAP Treasury, S/4HANA, Cash Forecasting, Treasury Transformation, Arjun Krishnan">
-    <title>Arjun Krishnan — Enterprise AI Solution Architect for Treasury</title>
+    <title>Arjun Krishnan — Enterprise AI Architect for Treasury</title>
     
     <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Arjun Krishnan — Enterprise AI Solution Architect for Treasury">
+    <meta property="og:title" content="Arjun Krishnan — Enterprise AI Architect for Treasury">
     <meta property="og:description" content="Helping Treasury leaders navigate the shift to enterprise AI — with the judgment, controls, and trust the profession demands.">
     <meta property="og:image" content="https://www.valorean.ai/valorean-lockup.png">
     <meta property="og:url" content="https://www.valorean.ai">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Arjun Krishnan — Enterprise AI Solution Architect for Treasury">
+    <meta name="twitter:title" content="Arjun Krishnan — Enterprise AI Architect for Treasury">
     <meta name="twitter:description" content="Helping Treasury leaders navigate the shift to enterprise AI. Author of Enterprise AI for Treasury.">
     <meta name="twitter:image" content="https://www.valorean.ai/valorean-lockup.png">
     
@@ -39,6 +39,16 @@
     }
     </script>
     
+    <script>
+      // Silence the Tailwind CDN "not for production" console advisory (cosmetic only).
+      (function () {
+        var w = console.warn;
+        console.warn = function () {
+          if (arguments[0] && String(arguments[0]).indexOf('cdn.tailwindcss.com') !== -1) return;
+          return w.apply(console, arguments);
+        };
+      })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,10 +93,10 @@
                 
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors">Home</a>
-                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors">About</a>
+                    <a href="#media" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors">Podcasts</a>
                     <a href="#book" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors">Book</a>
                     <a href="case-studies.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors">Case Studies</a>
-                    <a href="#media" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors">Media</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors">About</a>
                     <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium transition-colors">Contact</a>
                 </div>
                 
@@ -101,25 +111,25 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Home</a>
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About</a>
+                <a href="#media" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Podcasts</a>
                 <a href="#book" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Book</a>
                 <a href="case-studies.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Case Studies</a>
-                <a href="#media" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Media</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-28 md:pt-32 gradient-bg pb-16 md:pb-20 min-h-[calc(100vh-64px)] flex items-center scroll-mt-16">
+    <section id="home" class="pt-20 md:pt-24 gradient-bg pb-6 md:pb-8 min-h-0 flex items-center scroll-mt-16">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="grid md:grid-cols-6 gap-10 md:gap-12 items-center">
                 <div class="md:col-span-4 text-center md:text-left order-2 md:order-1">
-                    <h1 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 leading-tight" style="color: #1a2a4a;">
+                    <h1 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-5 leading-snug" style="color: #1a2a4a;">
                         I'm Arjun Krishnan. My mission is to help Treasury leaders navigate the shift to Enterprise AI &mdash; with the judgment, controls, and trust the profession is built on.
                     </h1>
-                    <p class="text-base md:text-lg font-medium mb-8 leading-relaxed" style="color: #4a4a4a;">
-                        Enterprise AI Solution Architect &middot; Author &middot; Speaker &middot; Founder, Valorean &middot; Former EY Managing Director &middot; CTP
+                    <p class="text-base md:text-lg lg:text-xl font-medium mb-5 leading-relaxed" style="color: #4a4a4a;">
+                        Enterprise AI Architect for Treasury &middot; Author &middot; Speaker &middot; Founder, Valorean &middot; Former EY Managing Director &middot; CTP
                     </p>
                     <div class="flex flex-wrap justify-center md:justify-start gap-4">
                         <a href="#media" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">Listen to the podcasts</a>
@@ -128,14 +138,37 @@
                     </div>
                 </div>
                 <div class="md:col-span-2 order-1 md:order-2 flex justify-center md:justify-end">
-                    <img src="arjun-photo.jpg" alt="Arjun Krishnan" class="w-40 md:w-full max-w-[220px] rounded-2xl shadow-xl">
+                    <img src="arjun-photo.jpg" alt="Arjun Krishnan" class="w-32 md:w-full max-w-[180px] rounded-2xl shadow-xl">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Podcasts Section -->
-    <section id="media" class="py-12 md:py-16 bg-white scroll-mt-20">
+    <!-- Independent architecture -->
+    <section id="architecture" class="pt-6 pb-10 md:pt-8 md:pb-12 bg-white scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Architecture before implementation.</h2>
+            <div class="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
+                <p>
+                    I work directly with CFOs and Treasury leaders to define the right Enterprise AI architecture for Treasury &mdash; combining deep Treasury domain expertise, SAP S/4HANA architecture, and Enterprise AI.
+                </p>
+                <p>
+                    My role is to help you decide what should &mdash; and should not &mdash; be built, how it should work, where AI creates genuine value, and how it operates within the controls, transparency, and human accountability the profession requires.
+                </p>
+                <p>
+                    The engagement is with you directly &mdash; no account team, no bench. Once the architecture is settled, I can work with your internal technical team, with my own, or alongside an integrator you choose.
+                </p>
+            </div>
+            <div class="mt-6 pl-6 border-l-4" style="border-color: #1a2a4a;">
+                <p class="text-lg md:text-xl italic text-gray-900 leading-relaxed">
+                    Your success is measured by the quality of the architecture and the outcome it delivers &mdash; not by the size of the implementation team.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="media" class="py-10 md:py-12 bg-white scroll-mt-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
                 <p class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2">On the Treasury Update Podcast</p>
@@ -190,7 +223,7 @@
     </section>
 
     <!-- Book Section -->
-    <section id="book" class="py-12 md:py-16 bg-gray-50 scroll-mt-20">
+    <section id="book" class="py-10 md:py-12 bg-gray-50 scroll-mt-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <p class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-3">And available now</p>
@@ -232,7 +265,7 @@
     </section>
 
     <!-- EuroFinance Barcelona -->
-    <section class="py-12 md:py-16 bg-white">
+    <section class="py-10 md:py-12 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-gray-50 rounded-2xl p-6 md:p-10">
                 <p class="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-3">Upcoming</p>
@@ -244,15 +277,13 @@
         </div>
     </section>
 
-    </section>
-
     <!-- Contact -->
-    <section id="contact" class="py-12 md:py-16 bg-gray-50 scroll-mt-20">
+    <section id="contact" class="py-10 md:py-12 bg-gray-50 scroll-mt-20">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Let's talk.</h2>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    If something in the podcasts, the book, or the case studies sparked a thought or questions, or if you're working through a specific treasury transformation or operational problem and would welcome a second opinion, please reach out.
+                    If something in the podcasts, the book, or the case studies sparked a thought or question &mdash; or if you're working through a Treasury transformation, an AI initiative, or an architectural decision and would value an independent perspective &mdash; please reach out.
                 </p>
                 <p class="text-gray-600 mt-4">
                     You can connect with me directly at <a href="mailto:arjun@valorean.ai" class="text-blue-600 hover:text-blue-700 font-medium">arjun@valorean.ai</a>

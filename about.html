@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About Arjun Krishnan, CTP — nearly three decades in enterprise treasury and finance. Founder and CEO of Valorean Technologies. Author of Enterprise AI for Treasury.">
     <meta name="keywords" content="Enterprise AI, Treasury AI, Agentic AI, SAP Treasury, S/4HANA, Cash Forecasting, Treasury Transformation, Arjun Krishnan">
-    <title>About — Arjun Krishnan, Enterprise AI Solution Architect for Treasury</title>
+    <title>About — Arjun Krishnan, Enterprise AI Architect for Treasury</title>
     
     <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Arjun Krishnan — Enterprise AI Solution Architect for Treasury">
+    <meta property="og:title" content="Arjun Krishnan — Enterprise AI Architect for Treasury">
     <meta property="og:description" content="Helping Treasury leaders navigate the shift to enterprise AI — with the judgment, controls, and trust the profession demands.">
     <meta property="og:image" content="https://www.valorean.ai/valorean-lockup.png">
     <meta property="og:url" content="https://www.valorean.ai">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Arjun Krishnan — Enterprise AI Solution Architect for Treasury">
+    <meta name="twitter:title" content="Arjun Krishnan — Enterprise AI Architect for Treasury">
     <meta name="twitter:description" content="Helping Treasury leaders navigate the shift to enterprise AI. Author of Enterprise AI for Treasury.">
     <meta name="twitter:image" content="https://www.valorean.ai/valorean-lockup.png">
     
@@ -39,6 +39,16 @@
     }
     </script>
     
+    <script>
+      // Silence the Tailwind CDN "not for production" console advisory (cosmetic only).
+      (function () {
+        var w = console.warn;
+        console.warn = function () {
+          if (arguments[0] && String(arguments[0]).indexOf('cdn.tailwindcss.com') !== -1) return;
+          return w.apply(console, arguments);
+        };
+      })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,7 +124,7 @@
     <section class="pt-28 md:pt-32 gradient-bg pb-12 md:pb-16">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About</h1>
-            <p class="text-lg md:text-xl text-gray-700">Enterprise AI Solution Architect for Treasury</p>
+            <p class="text-lg md:text-xl text-gray-700">Enterprise AI Architect for Treasury</p>
         </div>
     </section>
 
@@ -137,7 +147,7 @@
                         Treasury is entering its most significant transformation since the introduction of enterprise ERP systems. Enterprise AI now has the ability to reason across enterprise data, augment human judgment, and fundamentally reshape how treasury organizations operate, make decisions, and manage risk.
                     </p>
                     <p>
-                        As an Enterprise AI Solution Architect for Treasury, I work with treasury leaders to explore how Enterprise AI can be applied responsibly within treasury operations, workflows, and decision-making. My focus is not technology for its own sake, but practical, governed solutions that respect the controls, risk management, and professional judgment that define the treasury function.
+                        As an Enterprise AI Architect for Treasury, I work directly with CFOs and treasury leaders to define how Enterprise AI should be applied within treasury operations, workflows, and decision-making &mdash; and, just as importantly, where it should not. My focus is not technology for its own sake, but architecture that respects the controls, risk management, and professional judgment that define the treasury function.
                     </p>
                     <p>
                         Enterprise AI is evolving rapidly, and I see myself as a practitioner continually learning, listening, experimenting, and sharing what I learn with the treasury community. My aim is to contribute to the profession by exchanging ideas and helping treasury organizations navigate this new era with confidence and humility.
@@ -185,7 +195,7 @@
                 <h2 class="text-2xl font-bold text-gray-900 mb-6">Strategic Collaborators</h2>
                 <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
                     <p>
-                        Valorean's work is strengthened by trusted collaborators who bring deep experience and standing in the treasury profession.
+                        My work is strengthened by trusted collaborators who bring deep experience and standing in the treasury profession.
                     </p>
                     <div class="bg-gray-50 rounded-xl p-6 md:p-8 mt-6">
                         <div class="flex flex-col md:flex-row gap-6 items-start">
@@ -201,7 +211,7 @@
                         </div>
                     </div>
                     <p class="text-sm text-gray-600 italic mt-6">
-                        Valorean also partners with SAP-certified technical development firms for production-scale integration and ongoing technical support.
+                        Where implementation follows the architecture, I can work with your internal technical team, with my own, or alongside an integrator you choose.
                     </p>
                 </div>
             </div>
