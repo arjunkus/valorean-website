@@ -216,12 +216,48 @@
             <div class="bg-white rounded-2xl shadow-md p-6 md:p-8">
                 <div class="space-y-4 text-gray-700 leading-relaxed">
                     <p>
-                        Cash forecasting is often the first place organizations look when they consider enterprise AI for treasury &mdash; and for good reason. It's data-rich, decision-adjacent, and touches every downstream treasury process. But it's also a place where the wrong AI approach can quietly erode the professional judgment that makes forecasts meaningful.
+                        Cash forecasting is among the most demanding processes in corporate treasury, and the difficulty is structural rather than a matter of effort or skill. Seven challenges recur across almost every organisation.
                     </p>
+
+                    <div class="space-y-4 pt-2">
+                        <p><span class="font-semibold text-gray-900">Data from different sources.</span> The system of record, the banks, the treasury system, submissions from subsidiaries &mdash; each with its own format, timing and definitions. Assembling a single reliable view is often the longest part of the work.</p>
+
+                        <p><span class="font-semibold text-gray-900">Timing.</span> A forecast can have the amount exactly right and still be wrong, because the cash moved on a different day. Due dates are not payment dates.</p>
+
+                        <p><span class="font-semibold text-gray-900">Variables that change with the horizon.</span> What determines today's closing balance is not what determines the position thirteen weeks out. Near-dated cash is largely a matter of what is already known; longer horizons are a matter of behaviour, seasonality and genuine uncertainty.</p>
+
+                        <p><span class="font-semibold text-gray-900">Scenario analysis.</span> Asking what happens if a large receipt slips a week usually means exporting to a spreadsheet, at which point the analysis leaves the governed system behind.</p>
+
+                        <p><span class="font-semibold text-gray-900">Explainability and accuracy measurement.</span> It is easier to produce a forecast than to say why it moved, and easier to record that it missed than to establish why.</p>
+
+                        <p><span class="font-semibold text-gray-900">Two kinds of uncertainty, treated as one.</span> Some uncertainty is a gap in knowledge &mdash; an amount not yet available, a payment date not yet confirmed &mdash; and can be closed by finding out. Other uncertainty is inherent: a customer who has always settled somewhere between day 28 and day 35 will go on doing so, and no quantity of historical data will fix the date. Conflating the two is costly in both directions. Treating a knowledge gap as irreducible means accepting an error that could have been resolved; treating genuine variability as a knowledge gap means chasing a precision that does not exist, and presenting a forecast as more certain than it is.</p>
+
+                        <p><span class="font-semibold text-gray-900">The ceiling of existing tools.</span> Machine learning finds patterns in historical data and does it well. But it predicts without reasoning about why it was wrong, treats a contractual payment and an estimate as the same kind of input, and answers whether or not it has grounds to. Anything unstructured &mdash; the remittance text where the identifying detail sits &mdash; needs rules that must be written, then rewritten each time a counterparty or a bank changes a format.</p>
+                    </div>
+
+                    <p class="pt-2">
+                        These challenges share a shape: each requires judgment about information, not simply the processing of it. That is why they have proved durable.
+                    </p>
+
+                    <div class="mt-6 pl-6 border-l-4" style="border-color: #1a2a4a;">
+                        <p class="text-base md:text-lg text-gray-900 leading-relaxed">
+                            Agentic AI is the first treasury technology in a generation that does something genuinely new &mdash; it reasons across data rather than executing rules against it.
+                        </p>
+                    </div>
+
+                    <p class="pt-2">
+                        Every advance before it made specification faster or pattern-finding sharper. This is a different capability, and it is why these particular problems now look tractable. The question itself has not changed: what will the cash balance be, at the end of or during a given horizon, and with what confidence? What has changed is what can be brought to bear on it.
+                    </p>
+
                     <p>
-                        This case study shows what a responsible approach looks like: T+1 daily cash position, multi-horizon predictions from T+7 to T+90 and beyond, forecast accuracy tracking, and explainable AI that helps treasury professionals understand what's driving the forecast.
+                        Sources that do not agree can be reconciled at speed, including bank data that is often available but unused because it creates no accounting entry. Unstructured text can be read for meaning rather than parsed by rules, which removes both the need to anticipate every variant and the maintenance that follows from having tried. Method can follow the horizon, rather than forecasting statistically what is already known contractually. A system can distinguish what it could find out from what is genuinely unknowable, and act differently on each, rather than treating every uncertainty as the same problem. And a forecast can state its confidence rather than imply a precision it does not have &mdash; which is what allows a professional to act decisively on an uncertain number.
                     </p>
-                    <p class="text-sm text-gray-600 italic pt-2">Detailed write-up in preparation.</p>
+
+                    <p>
+                        Where the system lacks information, it says so and asks. Judgment about the things data cannot see stays where it belongs.
+                    </p>
+
+                    <p class="text-sm text-gray-500 italic pt-2">For the purpose of this proof of concept, the synthetic data is modelled in SAP format &mdash; reflecting the cash-flow structure SAP uses for forecasting &mdash; together with simulated bank statements in ISO 20022 format for settled cash. That said, the pipeline works from a normalised extraction, so the same approach applies regardless of the underlying system of record.</p>
                 </div>
             </div>
         </div>
