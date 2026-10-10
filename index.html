@@ -302,6 +302,10 @@
                         <label for="message" class="block text-sm font-medium text-gray-700 mb-1">What's on your mind?</label>
                         <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
                     </div>
+                    <!-- Honeypot: bots fill hidden fields, people do not.
+                         Formspree discards any submission that arrives with
+                         _gotcha set. No third party, no visitor friction. -->
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
                     <button id="contact-submit" type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors">
                         Send
                     </button>
@@ -376,14 +380,32 @@
               }
               return;
             }
-            // Formspree returns a JSON body naming what it rejected.
+            // Formspree names what it rejected, sometimes as errors[] and
+            // sometimes as a single error string. Read both, and report the
+            // status, so a failure is diagnosable from the page itself.
             return response.json().then(function (body) {
               var detail = body && body.errors && body.errors.length
                 ? body.errors.map(function (e) { return e.message; }).join(' ')
-                : '';
-              fail(detail || 'That didn’t send. Please try again, or email arjun@valorean.ai directly.');
+                : (body && body.error) || '';
+
+              // One rejection has a better answer than an error message. If
+              // reCAPTCHA is switched on for this form at Formspree, an AJAX
+              // post carries no token and is refused outright — but
+              // Formspree's own page can show the challenge. Hand the
+              // submission to it rather than strand someone who has already
+              // typed a message. form.submit() does not re-fire this handler.
+              if (/captcha/i.test(detail)) {
+                form.submit();
+                return;
+              }
+
+              fail(detail
+                ? detail + ' (' + response.status + ')'
+                : 'That didn’t send — the form service refused it (' +
+                  response.status + '). Please email arjun@valorean.ai directly.');
             }, function () {
-              fail('That didn’t send. Please try again, or email arjun@valorean.ai directly.');
+              fail('That didn’t send — the form service refused it (' +
+                response.status + '). Please email arjun@valorean.ai directly.');
             });
           }).catch(function () {
             fail('That didn’t send — it may be your connection. Please try again, or email arjun@valorean.ai directly.');
